@@ -4,10 +4,10 @@
  */
 window.SITE_CONTENT = {
   pageTitle: "Happy Birthday",
-  description: "小林23岁快乐！",
+  description: "",
   occasion: "Happy Birthday",
   recipientName: "",
-  heroEyebrow: "A little celebration, made with love",
+  heroEyebrow: "送给我最最亲爱的小林",
   heroSubtitle: "",
   letterDate: "November 2026",
   salutation: "亲爱的小林：",
