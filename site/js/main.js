@@ -99,7 +99,7 @@
       if (run !== typingRun) return;
       paragraph.textContent = paragraph.dataset.fullText || "";
       paragraph.classList.add("is-complete");
-      await wait(520);
+      await wait(1400);
     }
   };
 
