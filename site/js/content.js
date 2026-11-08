@@ -42,7 +42,7 @@ window.SITE_CONTENT = {
   },
   music: {
     enabled: true,
-    file: "assets/hush.mp3",
+    file: "assets/audio/hush.mp3",
     title: "与你，淡淡的幸福",
     delayedPlayback: {
       enabled: false,
