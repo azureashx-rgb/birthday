@@ -8,7 +8,7 @@ window.SITE_CONTENT = {
   occasion: "Happy Birthday",
   recipientName: "",
   heroEyebrow: "送给我最最亲爱的小林",
-  heroSubtitle: "",
+  heroSubtitle: "23岁快乐！",
   letterDate: "November 2026",
   salutation: "亲爱的小林：",
   letterParagraphs: [
