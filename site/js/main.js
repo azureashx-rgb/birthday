@@ -179,6 +179,7 @@
 
   if (musicEnabled && player && audio && musicButton) {
     audio.preload = "none";
+    audio.loop = true;
     audio.src = musicFile;
     player.hidden = false;
     setText("#music-title", musicSettings.title || "Background music");
