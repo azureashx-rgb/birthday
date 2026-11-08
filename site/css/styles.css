@@ -11,8 +11,8 @@
   --gold: #a76838;
   --line: rgba(188, 111, 131, 0.23);
   --shadow: rgba(95, 54, 63, 0.15);
-  --serif: Georgia, "Times New Roman", serif;
-  --script: "Segoe Script", "Bradley Hand", cursive;
+  --serif: "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+  --script: "Noto Serif SC", "Songti SC", "KaiTi", cursive;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -313,7 +313,10 @@ a { color: var(--rose-deep); }
 .letter-date { margin: 0 0 1.65rem; color: var(--rose-deep); font-size: .88rem; font-style: italic; text-align: right; overflow-wrap: anywhere; }
 .letter-salutation { margin: 0 0 1.25rem; font-size: clamp(1.2rem, 4vw, 1.55rem); font-style: italic; overflow-wrap: anywhere; }
 .letter-body { color: #63484d; font-size: clamp(.96rem, 2vw, 1.06rem); line-height: 2; }
-.letter-body p { min-height: 2rem; margin: 0 0 1.15rem; overflow-wrap: anywhere; }
+.letter-body p { min-height: 2rem; margin: 0 0 1.15rem; overflow-wrap: anywhere; white-space: pre-wrap; }
+.letter-body p.is-complete { animation: paragraph-arrives 520ms ease both; }
+.letter-section .section-heading p:last-child { max-width: 34rem; margin-inline: auto; }
+.letter-open { min-height: 3.4rem; padding-inline: 1.5rem; font-family: var(--serif); font-size: 1rem; }
 .letter-body p:not(.is-typing):not(.is-complete) { opacity: 0; }
 .no-js .letter-body p { opacity: 1; }
 .letter-body p.is-typing::after { content: "|"; margin-left: 2px; color: var(--rose-deep); animation: blink .7s step-end infinite; }
@@ -362,6 +365,7 @@ a { color: var(--rose-deep); }
 
 @keyframes gentle-bounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, .45rem); } }
 @keyframes letter-arrives { from { opacity: 0; transform: translateY(2.4rem) rotate(.7deg) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes paragraph-arrives { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes blink { 50% { opacity: 0; } }
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.13); } 24% { transform: scale(1); } }
 @keyframes soundbar { from { height: 28%; } to { height: 95%; } }
@@ -371,6 +375,8 @@ a { color: var(--rose-deep); }
   .polaroid:nth-child(even) { margin-top: 0; }
   .hero-bloom { opacity: .065; }
   .letter-paper { background: repeating-linear-gradient(transparent 0 31px, rgba(188,111,131,.095) 31px 32px), var(--paper); }
+  .letter-body { font-size: 1rem; line-height: 1.95; }
+  .letter-body p { margin-bottom: 1.25rem; }
 }
 
 @media (max-width: 390px) {
