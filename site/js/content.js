@@ -1,61 +1,38 @@
 /**
- * Birthday Love Letter Template — editable content
- *
- * Change the values below, save the file, and refresh the page.
- * Keep photo and music paths relative to site/index.html. User-provided text is
- * inserted with textContent by main.js; HTML in these strings is not interpreted.
+ * Birthday letter — personal content
+ * Audio will be added after the song file is supplied.
  */
 window.SITE_CONTENT = {
-  pageTitle: "A Birthday Letter for Your Person",
-  description: "A customizable floral birthday greeting, photo gallery, and heartfelt letter template.",
-
+  pageTitle: "Happy Birthday, 小林",
+  description: "一封写给小林的二十三岁生日信。",
   occasion: "Happy Birthday",
-  recipientName: "Your Person",
+  recipientName: "小林",
   heroEyebrow: "A little celebration, made with love",
-  heroSubtitle: "Replace this line with a short wish for someone special.",
-
-  galleryEyebrow: "A few favorite moments",
-  galleryHeading: "Our little gallery",
-  photos: [
-    {
-      src: "assets/placeholders/photo-1.svg",
-      alt: "Floral placeholder labeled Add photo 1",
-      caption: "Add your caption",
-      date: "Add a date or memory"
-    },
-    {
-      src: "assets/placeholders/photo-2.svg",
-      alt: "Floral placeholder labeled Add photo 2",
-      caption: "Add your caption",
-      date: "Add a date or memory"
-    },
-    {
-      src: "assets/placeholders/photo-3.svg",
-      alt: "Floral placeholder labeled Add photo 3",
-      caption: "Add your caption",
-      date: "Add a date or memory"
-    },
-    {
-      src: "assets/placeholders/photo-4.svg",
-      alt: "Floral placeholder labeled Add photo 4",
-      caption: "Add your caption",
-      date: "Add a date or memory"
-    }
-  ],
-
-  letterDate: "Month Day, Year",
-  salutation: "My dearest [name],",
+  heroSubtitle: "给亲爱的小林，写在二十三岁生日的这一天。",
+  letterDate: "November 2026",
+  salutation: "亲爱的小林：",
   letterParagraphs: [
-    "Write your message here.",
-    "Add another memory, wish, or reason this person matters to you.",
-    "Keep writing until the letter sounds unmistakably like you."
+    "见字如面。",
+    "好几年没有写过信了。特别是天天赖在你身边，提起笔都感觉有些羞耻——怎么几乎每天可以见面还要写信呢？",
+    "当然，由于这是一篇生日贺文，第一件事当然是热烈庆祝我们小林23岁生日快乐！哎，这样一想想我也22岁了哈哈哈哈，好热烈的年龄，好青春的年龄，仿佛有无限未来的年龄。23了哎！听起来已经是一个靠谱的小大人了。希望23岁的你变得更坚定，更勇敢，也希望这个世界能够多多偏爱你一些，让你遇见更多的好事，拥有更美好的人生与未来。",
+    "不知道为何，我很难在键盘上打下一些“希望你未来怎样怎样”的句子。你在我心里其实已经足够耀眼了，从我第一次见到你开始，我就爱上了你那双闪闪发亮的眼睛。我不知道该如何形容你在我心里的模样——我说你像红色——磅礴的、有力的、浓墨重彩的红色。这是我能想到最贴合你的词句。",
+    "我好享受和你一起生活的日子。我想和你有好多个一起生活的日子。",
+    "我从来没有想过，有一天我竟然会如此自如的说出这句话——你真的太突然的出现在我迷茫的生命里，突然到我甚至来不及想清楚现在究竟算不算一个好的时机——但是就算是坏的时机又如何呢？我遇见了你，这就是一个好事，是这个世界上最好的好事。",
+    "外面一直在放烟花。怎么写着写着就掉眼泪，想到你，我的幸福都从眼里溢出来了。",
+    "今年对我来说发生了好多事。失落、遗憾、悔恨与幸福。我总是喜欢把一些事情归结为命运，所以我就说嘛，遇见你一定是注定的。我遇见你之后，好像真的转运了——我的生活竟然开始充盈着快乐，我逐渐怀着对明天的期待合上眼睛。",
+    "谢谢你喜欢我，谢谢你迁就我，谢谢你参与我的人生——谢谢你，想和你说好多句谢谢你。",
+    "未来到底会如何呢？……我不敢细想，命运女神究竟会不会眷顾我们。但我与你交往的每一天，每一个今天与明天好像都是安全且璀璨的。",
+    "是的，安全。我第一次在恋人的身边，感受到如此具体的安全与快乐。和你相处的时光充斥着黄色的记忆球——你好像是我心的归属。",
+    "写到这里，我开始思索这短短几行字是不是把爱夸张的过于庞大了——可我确实想要这样告诉你。我没有办法每一个瞬间都可以脱口而出爱与想念，你总说我骂你，说我凶巴巴的。其实我有时候也觉得奇怪，明明很喜欢你，怎么老是说不出口呢？可能我就是这样一个别扭的人吧。比起说那些好听的话，我好像更习惯和你拌嘴，习惯在你面前毫无顾忌地展示自己那些乱七八糟的脾气，有时候我甚至觉得，喜欢你这件事已经完全渗入了我的生活。",
+    "说了这么多，怎么好像全是和你表白的话哈哈哈哈哈哈。怎么回事！我的高冷人设呢！",
+    "哎呀，生日这天嘛。就多说一点平常不好意思说的话啦。",
+    "总而言之，言而总之，嗯！我爱你！"
   ],
-  signature: "With love, [your name]",
-  footerText: "Made with care — customize every word and memory.",
-
+  signature: "喜欢你的我",
+  footerText: "愿你的二十三岁，明亮、自由，也一直被爱。",
   petals: {
     enabled: true,
-    count: 24,
+    count: 22,
     colors: ["#ed9fb1", "#f5bdc9", "#df879d", "#f8d7de"]
   },
   confetti: {
@@ -63,15 +40,13 @@ window.SITE_CONTENT = {
     count: 90,
     colors: ["#bc6f83", "#d99856", "#f0b6c3", "#7f9b76", "#f4d7a7"]
   },
-
-  // Music stays off until enabled and given a file. Only publish audio you are licensed to share.
   music: {
     enabled: false,
     file: "",
-    title: "Your licensed song",
+    title: "A song for 小林",
     delayedPlayback: {
-      enabled: true,
-      delayMs: 3000
+      enabled: false,
+      delayMs: 0
     }
   }
 };
