@@ -8,6 +8,7 @@
   let reduceMotion = motionQuery.matches;
   let letterOpened = false;
   let typingRun = 0;
+  let requestMusicPlayback = null;
 
   const setText = (selector, value) => {
     const node = document.querySelector(selector);
@@ -115,7 +116,7 @@
     }
     if (reduceMotion) showCompleteLetter();
     else typeLetter();
-    if (musicEnabled && typeof requestMusicPlayback === "function") requestMusicPlayback();
+    if (typeof requestMusicPlayback === "function") requestMusicPlayback();
     if (celebrate && !reduceMotion) launchConfetti();
   };
 
@@ -182,7 +183,7 @@
     player.hidden = false;
     setText("#music-title", musicSettings.title || "Background music");
 
-    const requestMusicPlayback = async () => requestPlayback();
+    requestMusicPlayback = async () => requestPlayback();
     const requestPlayback = async ({ automatic = false } = {}) => {
       if (playbackPending || !audio.paused) return !audio.paused;
       playbackPending = true;
