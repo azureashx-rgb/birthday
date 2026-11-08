@@ -8,7 +8,7 @@ const siteRoot = resolve(repositoryRoot, "site");
 const errors = [];
 const textExtensions = new Set([".html", ".css", ".js", ".svg"]);
 const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif"]);
-const audioExtensions = new Set([".ogg", ".wav", ".webm", ".m4a", ".aac"]);
+const audioExtensions = new Set([".mp3", ".ogg", ".wav", ".webm", ".m4a", ".aac"]);
 
 const fail = (message) => errors.push(message);
 const slash = (path) => path.split(sep).join("/");
@@ -27,7 +27,7 @@ function isAllowed(relativePath) {
   if (/^assets\/placeholders\/photo-[1-4]\.svg$/.test(relativePath)) return true;
   if (relativePath === "assets/placeholders/favicon.svg") return true;
   if (/^assets\/photos\/[a-z0-9]+(?:-[a-z0-9]+)*\.(?:jpg|jpeg|png|webp|avif|gif)$/.test(relativePath)) return true;
-  if (/^assets\/audio\/[a-z0-9]+(?:-[a-z0-9]+)*\.(?:ogg|wav|webm|m4a|aac)$/.test(relativePath)) return true;
+  if (/^assets\/audio\/[a-z0-9]+(?:-[a-z0-9]+)*\.(?:mp3|ogg|wav|webm|m4a|aac)$/.test(relativePath)) return true;
   return false;
 }
 
@@ -75,7 +75,6 @@ for (const file of files) {
 
   if (!isAllowed(relativePath)) fail(`Unexpected publishable file: ${relativePath}`);
   if (relativePath !== relativePath.toLowerCase()) fail(`Filename must be lowercase: ${relativePath}`);
-  if (extension === ".mp3") fail(`MP3 files are not permitted: ${relativePath}`);
   if (imageExtensions.has(extension) && size > 8 * 1024 * 1024) fail(`Image exceeds 8 MiB: ${relativePath}`);
   if (audioExtensions.has(extension) && size > 15 * 1024 * 1024) fail(`Audio exceeds 15 MiB: ${relativePath}`);
 
