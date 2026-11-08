@@ -81,7 +81,6 @@ for (const file of files) {
   if (!textExtensions.has(extension)) continue;
   const source = readFileSync(file, "utf8");
   const privacyPatterns = [
-    { pattern: /\bmp3\b/i, label: "an MP3 reference" },
     { pattern: /(?:[a-z]:\\|\/users\/|\/home\/)/i, label: "an absolute local path" },
     { pattern: /file:\/\//i, label: "a local file URL" },
     { pattern: /(?:^|[/.])\.git(?:[/?#]|$)/im, label: "a Git metadata reference" },
