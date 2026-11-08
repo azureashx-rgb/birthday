@@ -41,9 +41,9 @@ window.SITE_CONTENT = {
     colors: ["#bc6f83", "#d99856", "#f0b6c3", "#7f9b76", "#f4d7a7"]
   },
   music: {
-    enabled: false,
-    file: "",
-    title: "A song for 小林",
+    enabled: true,
+    file: "assets/hush.mp3",
+    title: "与你，淡淡的幸福",
     delayedPlayback: {
       enabled: false,
       delayMs: 0
