@@ -95,20 +95,10 @@
     }
     const run = ++typingRun;
     for (const paragraph of letterBody.querySelectorAll("p")) {
-      const characters = Array.from(paragraph.dataset.fullText || "");
-      paragraph.textContent = "";
-      paragraph.classList.add("is-typing");
-      for (const character of characters) {
-        if (run !== typingRun || reduceMotion) {
-          showCompleteLetter();
-          return;
-        }
-        paragraph.textContent += character;
-        await wait(19);
-      }
-      paragraph.classList.remove("is-typing");
+      if (run !== typingRun) return;
+      paragraph.textContent = paragraph.dataset.fullText || "";
       paragraph.classList.add("is-complete");
-      await wait(180);
+      await wait(520);
     }
   };
 
