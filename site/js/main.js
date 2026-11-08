@@ -125,6 +125,7 @@
     }
     if (reduceMotion) showCompleteLetter();
     else typeLetter();
+    if (musicEnabled && typeof requestMusicPlayback === "function") requestMusicPlayback();
     if (celebrate && !reduceMotion) launchConfetti();
   };
 
@@ -191,6 +192,7 @@
     player.hidden = false;
     setText("#music-title", musicSettings.title || "Background music");
 
+    const requestMusicPlayback = async () => requestPlayback();
     const requestPlayback = async ({ automatic = false } = {}) => {
       if (playbackPending || !audio.paused) return !audio.paused;
       playbackPending = true;
