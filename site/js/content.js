@@ -3,12 +3,12 @@
  * Audio will be added after the song file is supplied.
  */
 window.SITE_CONTENT = {
-  pageTitle: "Happy Birthday, 小林",
-  description: "一封写给小林的二十三岁生日信。",
+  pageTitle: "Happy Birthday",
+  description: "小林23岁快乐！",
   occasion: "Happy Birthday",
-  recipientName: "小林",
+  recipientName: "",
   heroEyebrow: "A little celebration, made with love",
-  heroSubtitle: "给亲爱的小林，写在二十三岁生日的这一天。",
+  heroSubtitle: "",
   letterDate: "November 2026",
   salutation: "亲爱的小林：",
   letterParagraphs: [
@@ -29,7 +29,7 @@ window.SITE_CONTENT = {
     "总而言之，言而总之，嗯！我爱你！"
   ],
   signature: "喜欢你的我",
-  footerText: "愿你的二十三岁，明亮、自由，也一直被爱。",
+  footerText: "愿你的二十三岁，明亮、自由。",
   petals: {
     enabled: true,
     count: 22,
